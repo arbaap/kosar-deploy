@@ -30,7 +30,10 @@ function CreateReporting() {
     }
 
     try {
-      const result = await axios.post("/c/rep", newreporting);
+      const result = await axios.post(
+        "https://kosar-server.vercel.app/c/rep",
+        newreporting
+      );
 
       console.log(result);
       Swal.fire("Okay", "Success Create Reporting", "success").then(

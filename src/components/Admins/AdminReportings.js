@@ -34,7 +34,9 @@ function AdminReportings() {
 
   const selesaireporting = (id, newStatus) => {
     axios
-      .put(`/u/rep?id=${id}`, { work_status: newStatus })
+      .put(`https://kosar-server.vercel.app/u/rep?id=${id}`, {
+        work_status: newStatus,
+      })
       .then((response) => {
         console.log(response.data);
         const updatedList = reportings.map((report) => {
